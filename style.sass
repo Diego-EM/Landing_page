@@ -1,17 +1,34 @@
 $white: #f9feff
 $blue: #466cd3
+$light_blue: #579df7
+$dark_blue: #27428c
     
 *
     margin: 0
     padding: 0
     box-sizing: border-box
     font-family: 'Lato', sans-serif
+    scroll-behavior: smooth
+
+html
+    transform: initial
+
+body
+    margin-top: 50px
+    overflow-x: hidden
 
 a
     text-decoration: none
 
 li
     list-style: none
+
+section
+    min-height: 50vh
+
+img
+    object-fit: cover
+    width: 100%
 
 #header
     position: fixed
@@ -20,9 +37,10 @@ li
     justify-content: space-around
     align-items: center
     height: 50px
-    width: 100%
+    width: 100vw
     padding: 5px 20px
     background-color: $white
+    z-index: 1000
 
     #header_logo
         display: flex
@@ -42,3 +60,125 @@ li
         a
             margin: 0 20px
             color: $blue
+
+#page_main
+    min-height: 100vh
+
+    #home
+        position: relative
+        display: flex
+        justify-content: space-around
+        align-items: center
+        padding: 40px 0
+        background-image: linear-gradient(to right top, #65a3fd, #6fa4fd, #79a5fd, #82a7fd, #8aa8fd)
+
+        #home_message
+            width: 50%
+            z-index: 10
+
+            h1  
+                color: $white
+                font-size: 4em
+
+            p
+                margin: 10px 0
+                color: $dark_blue
+                font-size: 2em
+
+
+        #phone_img
+            position: relative
+            width: 250px
+            z-index: 10
+
+            .people_bubble
+                position: absolute
+                border-radius: 50%
+                overflow: hidden
+                animation: bubble_appear 1s 150ms backwards
+
+                &:first-child
+                    bottom: 50px
+                    height: 150px
+                    width: 150px
+
+                &:nth-child(2)
+                    left: -90px
+                    height: 180px
+                    width: 180px
+
+                &:nth-child(3)
+                    top: 50px
+                    height: 120px
+                    width: 120px
+
+                &:nth-child(4)
+                    left: -45px
+                    bottom: 25px
+                    height: 70px
+                    width: 70px
+
+                &:nth-of-type(odd)
+                    right: -75px
+
+        #waves_bg
+            position: absolute
+            bottom: 0
+            min-height: 700px
+            opacity: 0.7
+            z-index: 1
+
+    #about
+        position: relative
+        display: flex
+        justify-content: space-around
+        align-items: center
+        background-color: $light_blue
+        color: $white
+
+        #about_content
+            width: 50%
+
+            h2
+                font-size: 2em
+                text-align: center
+
+            p
+                margin: 10px 0
+                font-size: 1.5em
+
+            ul
+                display: flex
+                flex-direction: column
+                font-size: 1.5em
+
+                img
+                    margin-right: 10px
+                    width: 20px
+
+                li
+                    margin: 5px 0
+
+        #about_img
+            height: 500px
+            width: 500px
+
+        // #wave_bg
+        //     position: absolute
+        //     left: 0
+        //     bottom: 0
+        // min-height: 700px
+        //     z-index: 1
+
+    #services
+        background-color: $white
+
+        
+
+@keyframes bubble_appear
+    from
+        opacity: 0
+        transform: scale(0.8)
+    to
+        opacity: 1
+        transform: scale(1)
