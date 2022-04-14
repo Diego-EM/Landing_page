@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 <body>
     <header id="header">
@@ -23,11 +24,53 @@
         </a>
         <nav>
             <ul id="header_links">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Contacto</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#services">Servicios</a></li>
+                <li><a href="#about">Sobre nosotros</a></li>
             </ul>
         </nav>
     </header>
+    <main id="page_main">
+        <section id="home">
+            <div id="home_message">
+                <h1>Videoconferencias ComTech</h1>
+                <p>Vamos por un mundo conectado</p>
+            </div>
+            <div id="phone_img">
+                <div class="people_bubble">
+                    <img src="./assets/person_1.jpg" alt="person" class="person_img">
+                </div>
+                <div class="people_bubble">
+                    <img src="./assets/person_2.jpg" alt="person" class="person_img">
+                </div>
+                <div class="people_bubble">
+                    <img src="./assets/person_3.jpg" alt="person" class="person_img">
+                </div>
+                <div class="people_bubble">
+                    <img src="./assets/person_4.jpg" alt="person" class="person_img">
+                </div>
+                <img src="./assets/smartphone.svg" alt="phone">
+            </div>
+            <img src="./assets/waves.svg" id="waves_bg">
+        </section>
+        <section id="about">
+            <img src="./assets/comunicate.png" alt="Comunicación en todo momento" id="about_img" class="sr">
+            <div id="about_content" class="sr">
+                <h2>Quienes somos</h2>
+                <p>Somo una empresa dedicada a la tecnología y comunicaciones.</p>
+                <p>Nuestro objetivo es brindar comunicación eficaz a nivel nacional e internacional a través
+                    de dispositivos electronicos.</p>
+                <p>Realiza videoconferencias con tus seres queridos y compañeros.</p>
+                <ul>
+                    <li class="sr"><img src="./assets/time.svg" alt="">No te preocupes por limite de tiempo, nuestras llamadas son ilimitadas.</li>
+                    <li class="sr"><img src="./assets/laptop.svg" alt="">Realiza tus actividades recreativas, de entretenimiento y profesionales estes donde estes.</li>
+                    <li class="sr"><img src="./assets/lock.svg" alt="">Todo a traves de reuniones privadas y seguras.</li>
+                </ul>
+            </div>
+        </section>
+        <section id="services"></section>
+        <section id="contact">Contactanos</section>
+    </main>
+<script src="./app.js"></script>
 </body>
 </html>
